@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('./font/Bebas/BebasNeue-Regular.woff2') format('woff2'),
+    url('./font/Bebas/BebasNeue-Regular.woff') format('woff');
+}
+
+.font-family-BebasNeue {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.app {
+    box-sizing: border-box;
+    width: 590px;
+    margin: auto;
+    padding: 18px;
+
+    border: 13px solid #ebebeb;
+}
+
+/* licenseList */
+.licenseItemContainer .licenseItemRadio {
+    display: none;
+}
+
+.licenseItemContainer {
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 19px 16px 19px 24px;
+
+    transition-duration: .3s;
+    transition-property: border, background-color;
+
+    border: 1px solid transparent;
+}
+
+.licenseItemPseudoRadio {
+    display: flex;
+
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+
+    border: 5px solid #dadada;
+    border-radius: 50%;
+}
+
+.licenseItemPseudoRadio:before {
+    display: none;
+
+    width: 12px;
+    height: 12px;
+    margin: auto;
+
+    content: '';
+
+    border-radius: 50%;
+    background-color: #0294bf;
+}
+
+.licenseItemWrapper {
+    display: flex;
+    align-items: baseline;
+    flex: auto;
+    justify-content: space-between;
+
+    margin-left: 20px;
+}
+
+.licenseItemName {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+
+    letter-spacing: 1px;
+    word-spacing: -.9px;
+    text-transform: uppercase;
+
+    color: #787878;
+}
+
+.licenseItemText {
+    letter-spacing: .1px;
+    word-spacing: 4.1px;
+
+    color: #787878;
+}
+
+.licenseItemContainer.active {
+    border: 1px solid #b8d7e2;
+    background-color: #ebf4f7;
+}
+
+.licenseItemContainer.active .licenseItemPseudoRadio {
+    border-color: #34648e;
+}
+
+.licenseItemContainer.active .licenseItemPseudoRadio:before {
+    display: block;
+}
+
+/* count */
+.countContainer {
+    display: flex;
+    align-items: center;
+
+    padding: 22px 0;
+}
+
+.countText {
+    font-size: 14px;
+
+    width: 49%;
+
+    text-align: right;
+    letter-spacing: .6px;
+
+    color: #000;
+}
+
+.countSelect {
+    box-sizing: border-box;
+    margin-left: 10px;
+    padding: 5px 11px;
+
+    color: #000;
+    border: 2px solid #8caee5;
+    border-radius: 3px;
+}
+
+.totalContainer {
+    padding: 23px 0;
+}
+
+.totalCost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.totalCostText {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+
+    color: #777;
+}
+
+.totalCostPrice {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+
+    color: #3388a8;
+}
+
+.totalCostPriceSup {
+    font-size: 16px;
+
+    display: inline-block;
+
+    margin-top: -5px;
+
+    vertical-align: middle;
+}
+
+.totalButtonWrapper {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 8px;
+}
+
+.totalButton {
+    padding: 16px 64px;
+
+    cursor: pointer;
+    text-transform: uppercase;
+
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    background-color: #33a845;
+}
+
+.totalPlan {
+    font-size: 20px;
+
+    margin-top: 48px;
+    margin-bottom: 4px;
+
+    text-align: center;
+
+    color: #3388a8;
+}
+
+.totalPlanText {
+    margin-right: 5px;
+}

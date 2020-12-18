@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Тестовое задание №1</title>
+</head>
+
+<body>
+    <div id="app" class="app">
+        <div class="licenseList">
+            <label class="licenseItemContainer" :class="{ active: activeRow === index }"
+                v-for="(item, index) in licenseList" :key="index">
+                <input type="radio" name="license" class="licenseItemRadio" :checked="activeRow === index"
+                    @change="activeRow = index" :value="index">
+                <span class="licenseItemPseudoRadio"></span>
+                <span class="licenseItemWrapper">
+                    <span class="licenseItemName">{{item.name}}</span>
+                    <span class="licenseItemText">${{item.price}} per license</span>
+                </span>
+            </label>
+        </div>
+        <hr>
+        <div class="countContainer">
+            <span class="countText">Number of licenses:</span>
+            <select class="countSelect" @change="licenseCount = $event.target.value" :value="licenseCount">
+                <option v-for="item in [1,2,3,4,5,6,7,8,9,10]" :key="item" :value="item">
+                    {{item}}</option>
+            </select>
+        </div>
+        <hr>
+        <div class="totalContainer">
+            <div class="totalCost">
+                <span class="totalCostText">Total:</span>
+                <span class="totalCostPrice">${{totalPrice}}<span class="totalCostPriceSup">us</span></span>
+            </div>
+            <div class="totalButtonWrapper">
+                <button class="totalButton">buy now</button>
+            </div>
+            <div class="totalPlan">
+                <span class="totalPlanText">Selected plan:</span>
+                 <span class="totalPlanNumber">#{{activeRow + 1}}</span> 
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+[
+    {
+        "name": "license plan A",
+        "price": 13
+    },
+    {
+        "name": "license plan B",
+        "price": 22
+    },
+    {
+        "name": "license plan C",
+        "price": 34
+    }
+]

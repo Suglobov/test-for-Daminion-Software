@@ -1,0 +1,22 @@
+.container {
+    width: 500px;
+    margin: auto;
+}
+
+.outCircle {
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+
+    border: 1px solid #34648e;
+    border-radius: 50%;
+}
+
+.innerCircle {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background-color: #0294bf;
+}
